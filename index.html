@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gourmet Haven - Fine Dining Restaurant</title>
+  <style>
+    :root {
+      --primary-color: #b7410e;
+      --secondary-color: #f5f0e1;
+      --accent-color: #4b332a;
+      --text-color: #333;
+      --bg-color: #fff8f0;
+      --shadow-color: rgba(0,0,0,0.1);
+      --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: var(--font-family);
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: var(--primary-color);
+      transition: color 0.3s ease;
+    }
+    a:hover {
+      color: var(--accent-color);
+    }
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 8px var(--shadow-color);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    ul.nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+    ul.nav-links li {
+      font-weight: 600;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      margin: 3rem 0 5rem;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+      color: var(--accent-color);
+    }
+    .hero-text p {
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+      color: #6b4c3b;
+    }
+    .btn-primary {
+      background-color: var(--primary-color);
+      padding: 0.75rem 2rem;
+      color: var(--secondary-color);
+      font-weight: 700;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      box-shadow: 0 4px 6px var(--shadow-color);
+      transition: background-color 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary:hover {
+      background-color: var(--accent-color);
+    }
+    .hero-image img {
+      border-radius: 12px;
+      box-shadow: 0 10px 20px var(--shadow-color);
+      max-height: 400px;
+      object-fit: cover;
+    }
+
+    #menu {
+      background-color: var(--secondary-color);
+      padding: 3rem 0;
+      border-radius: 12px;
+      box-shadow: 0 0 15px var(--shadow-color);
+    }
+    #menu h2 {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      color: var(--accent-color);
+    }
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+    .menu-item {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 5px 12px var(--shadow-color);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.3s ease;
+    }
+    .menu-item:hover {
+      transform: translateY(-8px);
+    }
+    .menu-item img {
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      height: 180px;
+      object-fit: cover;
+    }
+    .dish-name {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      color: var(--primary-color);
+    }
+    .dish-description {
+      font-size: 0.9rem;
+      color: #664c39;
+      flex-grow: 1;
+      margin-bottom: 1rem;
+    }
+    .dish-price {
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--accent-color);
+      align-self: flex-end;
+    }
+
+    #testimonials {
+      margin: 5rem 0;
+      text-align: center;
+    }
+    #testimonials h2 {
+      font-size: 2.5rem;
+      color: var(--accent-color);
+      margin-bottom: 2rem;
+    }
+    .testimonial-cards {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .testimonial {
+      background: var(--secondary-color);
+      padding: 2rem;
+      max-width: 320px;
+      border-radius: 12px;
+      box-shadow: 0 8px 15px var(--shadow-color);
+      font-style: italic;
+      color: #5a3d2d;
+      position: relative;
+      transition: box-shadow 0.3s ease;
+    }
+    .testimonial:hover {
+      box-shadow: 0 15px 25px var(--shadow-color);
+    }
+    .testimonial::before {
+      content: "“";
+      font-size: 4rem;
+      position: absolute;
+      top: 10px;
+      left: 15px;
+      color: #c97e4f;
+      opacity: 0.3;
+      font-family: serif;
+    }
+    .author {
+      display: block;
+      margin-top: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      font-style: normal;
+    }
+
+    #reservation {
+      background-color: var(--primary-color);
+      color: var(--secondary-color);
+      padding: 3rem 1rem;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px var(--shadow-color);
+    }
+    #reservation h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    #reservation p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+    }
+    .btn-secondary {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      font-weight: 700;
+      padding: 0.75rem 2.5rem;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1.1px;
+      box-shadow: 0 5px 12px var(--shadow-color);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .btn-secondary:hover {
+      background-color: var(--accent-color);
+      color: var(--secondary-color);
+    }
+
+    footer {
+      background-color: var(--accent-color);
+      color: var(--secondary-color);
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      letter-spacing: 0.3px;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: var(--secondary-color);
+      font-weight: 600;
+    }
+    footer a:hover {
+      color: var(--primary-color);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+      .hero-image img {
+        max-height: 300px;
+        margin: 0 auto;
+      }
+      nav ul.nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+      .testimonial-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">Gourmet Haven</div>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#reservation">Reserve</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="container hero" aria-label="Welcome section with restaurant introduction">
+    <div class="hero-text">
+      <h1>Experience Fine Dining Like Never Before</h1>
+      <p>Welcome to Gourmet Haven, where exquisite taste meets elegant ambiance. Indulge in crafted dishes prepared with passion and freshest ingredients.</p>
+      <button class="btn-primary" aria-label="Book a table now" onclick="document.getElementById('reservation').scrollIntoView({behavior:'smooth'});">Book a Table</button>
+    </div>
+    <div class="hero-image">
+      <!-- Image removed as requested -->
+    </div>
+  </section>
+
+  <section id="menu" class="container" aria-label="Restaurant menu highlights">
+    <h2>Our Signature Menu</h2>
+    <div class="menu-grid">
+      <article class="menu-item" tabindex="0">
+        <!-- Image removed as requested -->
+        <h3 class="dish-name">Herb-Grilled Salmon</h3>
+        <p class="dish-description">Fresh Atlantic salmon grilled to perfection, served with lemon butter sauce and seasonal greens.</p>
+        <span class="dish-price">₹2,099</span>
+      </article>
+      <article class="menu-item" tabindex="0">
+        <!-- Image removed as requested -->
+        <h3 class="dish-name">Wild Mushroom Risotto</h3>
+        <p class="dish-description">Creamy arborio rice cooked slowly with wild mushrooms and white wine, topped with Parmesan cheese.</p>
+        <span class="dish-price">₹1,699</span>
+      </article>
+      <!-- Beef dish removed as requested -->
+      <article class="menu-item" tabindex="0">
+        <!-- Image removed as requested -->
+        <h3 class="dish-name">Garden Fresh Salad</h3>
+        <p class="dish-description">A mix of organic greens, heirloom tomatoes, cucumbers, and a house vinaigrette dressing.</p>
+        <span class="dish-price">₹999</span>
+      </article>
+    </div>
+  </section>
+
+  <section id="testimonials" class="container" aria-label="Customer testimonials about the restaurant">
+    <h2>What Our Patrons Say</h2>
+    <div class="testimonial-cards">
+      <blockquote class="testimonial" tabindex="0">
+        "An unforgettable dining experience with impeccable service and heavenly flavors. Highly recommended!"
+        <span class="author">- Joel J George</span>
+      </blockquote>
+
+      <blockquote class="testimonial" tabindex="0">
+        "Gourmet Haven offers a perfect combination of ambiance and taste. Every dish was a masterpiece."
+        <span class="author">- Dan Abram Jose</span>
+      </blockquote>
+
+      <blockquote class="testimonial" tabindex="0">
+        "The best steak I've ever had in the city. Will definitely be coming back with friends."
+        <span class="author">- Dandela Vegna Ronith</span>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="reservation" aria-label="Call to action for reservation">
+    <h2>Reserve Your Table Now</h2>
+    <p>Join us for a memorable dining experience. Book your spot and enjoy our chef's specials.</p>
+    <button class="btn-secondary" aria-label="Reserve a table" onclick="alert('Reservation feature coming soon!')">Reserve Now</button>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Gourmet Haven. All rights reserved. | <a href="mailto:contact@gourmethaven.com">contact@gourmethaven.com</a></p>
+  </footer>
+
+</body>
+</html>
