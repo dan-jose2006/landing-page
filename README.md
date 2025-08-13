@@ -1,8 +1,10 @@
 Project Overview
+
 This is a responsive landing page for a fictional fine-dining restaurant called Gourmet Haven.
 It is designed with HTML5 and CSS3 (no external libraries) to ensure fast loading and mobile compatibility.
 
 Features
+
 Sticky navigation bar with smooth scrolling
 
 Hero section with restaurant intro and call-to-action button
@@ -21,7 +23,8 @@ Live Demo
 Open the webpage on any device using this link:
 https://dan-jose2006.github.io/landing-page/
 
-What I Learned
+What I Learned!
+
 While building this project, I learned:
 
 How to structure a webpage using semantic HTML for better accessibility.
