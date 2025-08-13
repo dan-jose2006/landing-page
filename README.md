@@ -1,38 +1,43 @@
-Project Overview
+Gourmet Haven – Fine Dining Landing Page
 
-This is a responsive landing page for a fictional fine-dining restaurant called Gourmet Haven.
-It is designed with HTML5 and CSS3 (no external libraries) to ensure fast loading and mobile compatibility.
+Overview
+
+Gourmet Haven is a responsive landing page for a fictional fine-dining restaurant.
+Built with pure HTML5 and CSS3, the design ensures fast performance, cross-device compatibility, and accessibility.
 
 Features
 
-Sticky navigation bar with smooth scrolling
+Sticky Navigation Bar with smooth scrolling between sections.
 
-Hero section with restaurant intro and call-to-action button
+Hero Section introducing the restaurant with a call-to-action button.
 
-Menu section showcasing signature dishes with prices
+Menu Section highlighting signature dishes and prices.
 
-Testimonials section with customer reviews
+Testimonials Section displaying customer reviews.
 
-Reservation section for booking a table
+Reservation Section for booking a table.
 
-Responsive design for mobile, tablet, and desktop
+Responsive Design for mobile, tablet, and desktop.
 
-Accessible with semantic HTML and ARIA labels
+Semantic HTML and ARIA labels for accessibility.
 
 Live Demo
-Open the webpage on any device using this link:
+
+You can view the webpage on any device here:
 https://dan-jose2006.github.io/landing-page/
 
-What I Learned!
+What I Learned
 
-While building this project, I learned:
+During the development of this project, I gained experience in:
 
-How to structure a webpage using semantic HTML for better accessibility.
+Structuring a webpage with semantic HTML for better SEO and accessibility.
 
-How to create a fully responsive layout using CSS Grid and media queries.
+Designing a responsive layout using CSS Grid and media queries.
 
-How to implement a sticky navigation bar with smooth scrolling.
+Implementing a sticky navigation bar with smooth scroll behavior.
 
-How to design visually appealing sections with color palettes, typography, and box shadows.
+Choosing and applying a cohesive color palette and typography.
 
-The importance of optimizing a webpage for different screen sizes and devices.
+Adding visual depth using box shadows and hover effects.
+
+Optimizing the site for different screen sizes and devices.
