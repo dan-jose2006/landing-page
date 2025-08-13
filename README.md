@@ -21,6 +21,7 @@ Live Demo
 Open the webpage on any device using this link:
 https://dan-jose2006.github.io/landing-page/
 
+What I Learned
 While building this project, I learned:
 
 How to structure a webpage using semantic HTML for better accessibility.
